@@ -7,6 +7,6 @@ mongoose
   .connect(process.env.MONGO_URI, {
     dbname: "backend-API",
   })
-  .then(() => console.log("db connected"))
+  .then((c) => console.log(`db connected ${c.connection.host}`))
   .catch((err) => console.log(err));
 }
